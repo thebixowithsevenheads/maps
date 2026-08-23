@@ -126,32 +126,6 @@ Qualquer coisa fora da tabela acima vira texto simples: não quebra a página,
 só não vira formatação. HTML escrito no `.md` é escapado e aparece literal,
 nunca é executado.
 
-## Para o mantenedor
-
-O conversor (`build.py`, Python 3, sem dependências) fica **apenas na máquina
-do mantenedor** e está listado no `.gitignore`. Depois de revisar e aplicar um
-pull request:
-
-```sh
-python3 build.py
-```
-
-Ele lê todo `md/*.md` e reescreve `maps/*.html`, `index.html` e `style.css`.
-Um `.html` em `maps/` que não tenha mais o `.md` correspondente é apagado, então
-renomear ou remover um roadmap não deixa página órfã no ar. Faça o commit dos
-arquivos gerados junto com o `.md` aprovado.
-
-Os links para o GitHub saem do `git remote origin` (SSH ou HTTPS, tanto faz) e
-da branch atual — não há nada para configurar. Sem remote configurado, cai em
-`REPO_URL_FALLBACK`. Para fixar valores, edite `REPO_URL` e `REPO_BRANCH` no
-topo do script.
-
-O botão "voltar à casa" da página inicial sai de `HOME_URL` / `HOME_LABEL`, no
-mesmo lugar. `HOME_URL = None` remove o botão.
-
-O arquivo `.nojekyll` desliga o processamento Jekyll do GitHub Pages: o site é
-servido exatamente como está no repositório.
-
 ## Licença
 
 A fonte GohuFont está em `fonts/` sob a sua própria licença — veja
