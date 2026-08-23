@@ -1,0 +1,228 @@
+/* GERADO POR build.py - NAO EDITE. Edite o .md em md/ e recompile. */
+
+@font-face {
+  font-family: "Gohu";
+  src: url("fonts/GohuFontUni-Subset.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg: #05070a;
+  --veil: rgba(5, 7, 10, .58);
+  --fg: #d3dae3;
+  --muted: #78859a;
+  --accent: #e3b341;
+  --link: #a9c9ff;
+  --rule: rgba(255, 255, 255, .09);
+  --card: rgba(5, 7, 10, .42);
+  --mono: "Gohu", "DejaVu Sans Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--mono);
+  font-size: 15px;
+  line-height: 1.7;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .85);
+}
+
+/* fundo fotografico + veu escuro para o texto continuar legivel */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+body::before {
+  background: url("img/fundo.jpg") center / cover no-repeat fixed;
+}
+
+body::after {
+  background:
+    linear-gradient(rgba(5, 7, 10, .30), rgba(5, 7, 10, .62)),
+    var(--veil);
+}
+
+.wrap {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 72px 24px 96px;
+  text-align: center;
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover, a:focus-visible { color: var(--accent); text-decoration: underline; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+code {
+  font-family: var(--mono);
+  font-size: .92em;
+  background: rgba(255, 255, 255, .07);
+  border-radius: 3px;
+  padding: .1em .4em;
+}
+
+/* ---- cabecalho ---- */
+
+.head { margin-bottom: 56px; }
+
+.logo {
+  margin: 0;
+  font-size: 44px;
+  line-height: 1.1;
+  letter-spacing: .06em;
+  color: #fff;
+}
+
+.tagline {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.head h1 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.25;
+  color: #fff;
+  letter-spacing: .02em;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 30px;
+  padding: 7px 16px;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: rgba(5, 7, 10, .42);
+  font-size: 12px;
+  letter-spacing: .04em;
+  color: var(--muted);
+  transition: border-color .15s, color .15s, background .15s;
+}
+
+.back:hover, .back:focus-visible {
+  border-color: var(--accent);
+  background: rgba(227, 179, 65, .08);
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.desc {
+  margin: 16px 0 0;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--fg);
+}
+
+.by { margin: 14px 0 0; color: var(--muted); font-size: 13px; }
+.by span { color: var(--accent); }
+
+/* ---- indice ---- */
+
+.maps { list-style: none; margin: 0; padding: 0; }
+.maps li + li { margin-top: 14px; }
+
+.maps a {
+  display: block;
+  padding: 22px 20px;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: var(--card);
+  color: var(--fg);
+  transition: border-color .15s, background .15s, transform .15s;
+}
+
+.maps a:hover, .maps a:focus-visible {
+  border-color: var(--accent);
+  background: rgba(227, 179, 65, .06);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.maps .t { display: block; font-size: 20px; color: #fff; letter-spacing: .02em; }
+.maps a:hover .t, .maps a:focus-visible .t { color: var(--accent); }
+.maps .d {
+  display: block;
+  margin: 10px 0 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--fg);
+}
+
+.maps .m { display: block; margin-top: 10px; font-size: 12px; color: var(--muted); }
+.maps .empty { color: var(--muted); font-size: 14px; }
+
+/* ---- corpo do roadmap ---- */
+
+.doc { text-align: center; }
+
+.doc h2 {
+  margin: 56px 0 4px;
+  padding-top: 28px;
+  border-top: 1px solid var(--rule);
+  font-size: 21px;
+  line-height: 1.35;
+  color: var(--accent);
+  letter-spacing: .02em;
+}
+
+.doc h2:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+
+.doc h3 {
+  margin: 34px 0 10px;
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.doc p { margin: 14px 0; }
+
+.doc ul { list-style: none; margin: 0; padding: 0; }
+
+.doc li {
+  padding: 5px 0;
+  line-height: 1.6;
+}
+
+.doc li + li { border-top: 1px solid rgba(255, 255, 255, .05); }
+
+/* ---- rodape ---- */
+
+.foot {
+  margin-top: 72px;
+  padding-top: 26px;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.foot p { margin: 6px 0; }
+
+/* ---- telas pequenas ---- */
+
+@media (max-width: 640px) {
+  .wrap { padding: 48px 18px 64px; }
+  .logo { font-size: 34px; }
+  .head h1 { font-size: 24px; }
+  .doc h2 { font-size: 19px; }
+  body::before { background-attachment: scroll; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}

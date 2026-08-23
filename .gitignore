@@ -1,0 +1,19 @@
+# ---------------------------------------------------------------
+# Conversor Markdown -> HTML: ferramenta local do mantenedor.
+# NAO deve ir para o repositorio.
+# ---------------------------------------------------------------
+build.py
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Sistema / editores
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
