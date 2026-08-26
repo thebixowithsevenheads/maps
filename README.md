@@ -3,9 +3,6 @@
 Roadmaps de estudo, abertos e mantidos pela comunidade.
 Parte de [thebixowithsevenheads.wtf](https://thebixowithsevenheads.wtf/).
 
-> **Comunidade Brasileira de low level/Hacking no XMPP**
-> [`bincult@muc.pwned.life`](xmpp:bincult@muc.pwned.life?join)
-
 Site estático, sem build no CI, sem dependências em produção: são apenas
 arquivos HTML, CSS, fontes e imagens servidos direto do repositório.
 

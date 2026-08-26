@@ -15,8 +15,6 @@
   --muted: #78859a;
   --accent: #e3b341;
   --link: #a9c9ff;
-  --muc: #6D28D9;
-  --muc-fg: #b39cf5;
   --rule: rgba(255, 255, 255, .09);
   --card: rgba(5, 7, 10, .42);
   --mono: "Gohu", "DejaVu Sans Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -214,44 +212,6 @@ code {
 }
 
 .foot p { margin: 6px 0; }
-
-.muc {
-  display: block;
-  margin-top: 26px;
-  padding: 20px;
-  border: 1px solid var(--rule);
-  border-radius: 6px;
-  background: var(--card);
-  color: var(--fg);
-  transition: border-color .15s, background .15s, transform .15s;
-}
-
-.muc:hover, .muc:focus-visible {
-  border-color: var(--muc-fg);
-  background: rgba(109, 40, 217, .18);
-  text-decoration: none;
-  transform: translateY(-1px);
-}
-
-.muc-t {
-  display: block;
-  font-size: 11px;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  color: var(--muted);
-  line-height: 1.5;
-}
-
-.muc-j {
-  display: block;
-  margin-top: 9px;
-  font-size: 16px;
-  color: var(--muc-fg);
-  letter-spacing: .02em;
-}
-
-.muc:hover .muc-t, .muc:focus-visible .muc-t { color: var(--fg); }
-.muc:hover .muc-j, .muc:focus-visible .muc-j { color: #d6c8ff; }
 
 /* ---- telas pequenas ---- */
 
